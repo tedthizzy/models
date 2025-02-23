@@ -68,11 +68,24 @@ The Python AI server (NVIDIA CUDA + PyTorch) currently runs:
 
 ## Starter Resources
 
-1. **Conda Environment File**: `environment.yml` for one-step setup.
-2. **Quickstart Command**: `python run_ocr.py --model=ms_ocr --data=./test_data`
-3. **Baseline Metrics**: Include a simple table or CSV of current accuracy/latency.
-4. **README**: High-level folder structure & script descriptions.
-5. **Hello World Task**: Process 10 sample images with Microsoft OCR to confirm setup.
+1. **Virtual Env Setup** (note you may need multiple diff virt envs for model conversions):
+   ```bash
+   brew install python@3.10   # recommend installing homebrew for easy library installs
+   cd models
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt   # starting reqs may need to install a few more things
+   ```
+
+2. **Quickstart Command**
+   ```bash
+   python scripts/run_ocr.py --image_path data/test_images/sample1.png
+   ```
+
+3. **Comfirm** script runs successfully on at least one test image
+
+4. **IDE** personally I use mac osx unix shell and vim for file edits. cursor might be good too. but if you have msdos you might consider using Git Bash or doing most of your work on the server which is linux. unix shells are easier than powershell - above commands are unix.
 
 ---
 
